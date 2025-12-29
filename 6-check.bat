@@ -52,7 +52,7 @@ if %errorlevel%==0 (
     for /f %%a in ('choco --version') do set "choco_ver=%%a"
     echo Chocolatey        ^| OK         ^| !choco_ver!
 ) else (
-    echo Chocolatey        ^| Missing    ^| Run: 5-chocolatey.bat
+    echo Chocolatey        ^| Missing    ^| Run: 4-chocolatey.bat
     set all_ok=0
     set "missing_packages=!missing_packages!Chocolatey, "
 )
@@ -63,7 +63,7 @@ if %errorlevel%==0 (
     for /f %%a in ('unpaper --version') do set "unpaper_ver=%%a"
     echo Unpaper           ^| OK         ^| !unpaper_ver!
 ) else (
-    echo Unpaper           ^| Missing    ^| Run: 6-unpaper.bat
+    echo Unpaper           ^| Missing    ^| Run: 5-pngquant, unpaper, ghostscript.bat
     set all_ok=0
     set "missing_packages=!missing_packages!Unpaper, "
 )
@@ -74,7 +74,7 @@ if %errorlevel%==0 (
     for /f "tokens=1*" %%a in ('pngquant --version') do set "pngquant_ver=%%a %%b"
     echo pngquant          ^| OK         ^| !pngquant_ver!
 ) else (
-    echo pngquant          ^| Missing    ^| Run: 7-pngquant.bat
+    echo pngquant          ^| Missing    ^| Run: 5-pngquant, unpaper, ghostscript.bat
     set all_ok=0
     set "missing_packages=!missing_packages!pngquant, "
 )
@@ -85,7 +85,7 @@ if %errorlevel%==0 (
     for /f %%a in ('gswin64c --version') do set "gs_ver=%%a"
     echo Ghostscript       ^| OK         ^| !gs_ver!
 ) else (
-    echo Ghostscript       ^| Missing    ^| Run: 8-ghostscript.bat
+    echo Ghostscript       ^| Missing    ^| Run: 5-pngquant, unpaper, ghostscript.bat
     set all_ok=0
     set "missing_packages=!missing_packages!Ghostscript, "
 )
