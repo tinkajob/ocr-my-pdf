@@ -141,7 +141,7 @@ set "outputFile=%outputDir%\%cleanName% - OCR.pdf"
 echo.
 echo ✅ Processing file: "%filename%"
 echo ✅ Output file will be: "%outputFile%"
-python -m ocrmypdf --deskew --clean --rotate-pages --optimize 3 --force-ocr -l eng+slv "%filename%" "%outputFile%" 2>&1
+python -m ocrmypdf --deskew --clean --rotate-pages --optimize 3 --force-ocr "%filename%" "%outputFile%" 2>&1
 
 if errorlevel 1 (
     echo.
